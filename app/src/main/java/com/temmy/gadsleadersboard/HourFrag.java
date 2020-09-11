@@ -2,7 +2,6 @@ package com.temmy.gadsleadersboard;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +27,7 @@ public class HourFrag extends Fragment {
     String extension;
     URL mBuilder;
     String result;
-    ProgressBar mProgressBar;
+
 
     public HourFrag() {
         // Required empty public constructor
@@ -40,10 +38,9 @@ public class HourFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         extension = "/api/hours";
         mBuilder = ApiBuilder.ApiBuilder(extension);
-        mProgressBar = mView.findViewById(R.id.progressbr);
-        TextView mNetworkmsg = mView.findViewById(R.id.network);
+
         try {
-                result = new Dataquery(mProgressBar, mNetworkmsg).execute(mBuilder).get();
+                result = new Dataquery().execute(mBuilder).get();
                 JSONArray jsonArray = new JSONArray(result);
                 mName = new ArrayList<String>();
                 mDetails = new ArrayList<String>();
@@ -78,6 +75,5 @@ public class HourFrag extends Fragment {
         mRecyclerView.setAdapter(mAdadpter);
         return mView;
     }
-
 
 }
