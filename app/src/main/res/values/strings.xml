@@ -1,0 +1,16 @@
+<resources>
+  <string name="app_name">GADS Leader\'s Board</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="leader_board">LEADER BOARD</string>
+  <string name="submit">SUBMIT</string>
+  <string name="project_submission">Project Submission</string>
+  <string name="submitbutton">SUBMIT</string>
+  <string name="email_address">Email Address</string>
+  <string name="project_git_link">Project on GITHUB(link)</string>
+  <string name="firstname">Firstname</string>
+  <string name="surname">Surname</string>
+  <string name="score_country_region">Score, Country, Region</string>
+  <string name="fakile_temitope">Fakile Temitope</string>
+  <string name="todo">TODO</string>
+</resources>
